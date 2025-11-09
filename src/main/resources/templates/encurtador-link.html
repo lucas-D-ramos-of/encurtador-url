@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+    <!-- Aqui é reutilização de código, então cria esse fragment
+     nesse usa o head que ele puxa o css e o script
+     é mais facil assim para manutenção, ta,bém vi que é
+     possivel colocar parametros para ele, então ai estou
+     mandando uma String('Encurtador de Link')-->
+  <head th:replace="fragments/head :: head('Encurtador de Link')"></head>
+
+  <body>
+    <!-- Outra reutilização de codigo, aqui é o cabecalho com menu -->
+  <div th:insert="fragments/header :: headerPrivate"></div>
+
+    <main class="conteudo-principal">
+      <h1>Encurtador de Link</h1>
+
+      <div class="box">
+        <h2>Link Original</h2>
+        <input type="text" placeholder="Cole o link aqui..." id="link-original">
+
+        <button id="btn-encurtar">Encurtar</button>
+
+        <h2>Link Encurtado</h2>
+        <input type="text" id="link-curto" readonly placeholder="Seu link aparecerá aqui">
+
+        <button id="btn-copiar">Copiar</button>
+      </div>
+    </main>
+
+    <!-- Reutilização de codigo, aqui é o rodapé ele 
+     pode ser igual o da pagina login-->
+  <div th:insert="fragments/footer :: footer"></div>
+  </body>
+</html>

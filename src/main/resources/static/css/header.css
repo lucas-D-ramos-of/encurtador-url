@@ -1,0 +1,85 @@
+/* Aqui tem o cabeçalho, menu e hamburger */
+
+.cabecalho {
+  position: relative;
+  background-color: var(--branco);
+  text-align: center;
+  padding: 15px;
+  height: 70px;
+  box-shadow: var(--sombra-fraca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.menu-btn {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+.menu-btn:hover { transform: scale(1.05); }
+.menu-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--destaque);
+  border-radius: 2px;
+  box-shadow: 0 0 4px var(--destaque);
+  transition: all 0.3s ease;
+}
+.menu-btn.active .bar:nth-child(1) { transform: rotate(45deg) translate(6px, 5px); }
+.menu-btn.active .bar:nth-child(2) { opacity: 0; }
+.menu-btn.active .bar:nth-child(3) { transform: rotate(-45deg) translate(8px, -7px); }
+
+.menu {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--fundo-2) 0%, #aaff7f 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease;
+  z-index: 10;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  border-top-left-radius: 20px;
+}
+.menu a {
+  color: var(--destaque);
+  text-decoration: none;
+  margin-top: 80px;
+  padding: 12px 0;
+  width: 80%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 10px;
+  background: var(--atenuado);
+  transition: all 0.3s ease;
+}
+.menu a:hover { background-color: var(--destaque); color: var(--fundo-2); transform: scale(1.05); box-shadow: 0 0 10px rgba(0,0,0,0.6); }
+.menu a:focus-visible { outline: 3px solid rgba(126,217,87,0.35); outline-offset: 3px; }
+.menu.active { width: 200px; }
+.menu .log-out:hover { background: red; color: #fff; }
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.menu-backdrop.active { opacity: 1; pointer-events: auto; }

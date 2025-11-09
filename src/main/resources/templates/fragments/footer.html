@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <div th:fragment="footer">
+    <footer class="rodape" style="text-align:center;padding:10px 0;color:#fff;">
+      <small>© <span th:text="${#dates.format(#dates.createNow(),'yyyy')}">2025</span> Lil Lin</small>
+    </footer>
+  </div>
+</html>

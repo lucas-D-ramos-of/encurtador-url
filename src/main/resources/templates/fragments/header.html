@@ -1,0 +1,33 @@
+<div xmlns:th="http://www.thymeleaf.org">
+  <div th:fragment="headerPrivate">
+    <header class="cabecalho">
+      <h1>Lil Lin</h1>
+
+      <div class="menu-btn" id="menu-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="menu" id="menu">
+  <a th:href="@{/trocar-senha}">Trocar senha</a>
+        <a href="#">Histórico de links</a>
+        <a href="#">Sobre</a>
+        <a href="#" class="log-out">Sair</a>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Header público - ele é para não aparecer o menu
+   então dá para usar quando o usuario ainda não logou para
+   não ter acesso as outras paginas, quando for usar ele tem
+   que fazer assim 
+   <div th:insert="fragments/header :: headerPublic"></div> 
+   o outro é so colocar headerPrivate no lugar de headerPublic.
+   -->
+  <div th:fragment="headerPublic">
+    <header class="cabecalho">
+      <h1>Lil Lin</h1>
+    </header>
+  </div>
+</div>
