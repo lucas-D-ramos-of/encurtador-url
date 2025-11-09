@@ -44,6 +44,10 @@
 .form-actions .btn-link:hover { text-decoration:none; color:var(--fundo-2); }
 .form-actions button { flex: 0 0 auto; }
 
+.cadastro-form { width: 100%; display:flex; flex-direction:column; gap:14px; }
+.cadastro-form .form-field { display:flex; flex-direction:column; gap:6px; text-align:left; width:100%; }
+.cadastro-form label { font-size:0.9rem; font-weight:600; color:var(--destaque); }
+
 .rodape { margin-top: 40px; }
 
 .aux-links {
@@ -52,6 +56,9 @@
   justify-content: space-between;
   margin-top: 8px;
   gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .aux-links .aux-link {
   font-size: 0.9rem;
@@ -60,5 +67,5 @@
   border-bottom: 1px dashed rgba(0,0,0,0.08);
   padding-bottom: 2px;
 }
-.aux-links .aux-link:hover { color: var(--fundo-2); border-bottom-color: rgba(126,217,87,0.9); }
 
+.aux-links .aux-link:hover { color: var(--fundo-2); border-bottom-color: rgba(126,217,87,0.9); }

@@ -16,7 +16,7 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/encurtador")
+    @GetMapping("/encurtador-link")
     public String encurtador(){
         return "encurtador-link";
     }
@@ -25,4 +25,8 @@ public class MainController {
     public String trocarSenha() {
         return "trocar-senha";
     }
+
+    @GetMapping("/cadastro")
+    public String cadastro() { return "cadastro"; }
+
 }

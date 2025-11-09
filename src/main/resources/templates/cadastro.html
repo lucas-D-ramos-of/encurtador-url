@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head :: head('Entrar')"></head>
+
+<body>
+
+<div th:insert="fragments/header :: headerPublic"></div>
+
+<main class="conteudo-principal">
+  <h1>Cadastrar</h1>
+
+  <div class="box cadastro-card">
+    <form th:action="@{/cadastro}" method="post" class="cadastro-form">
+
+      <div class="form-field">
+        <label for="user">Usuário</label>
+        <input type="text" id="user" name="user" placeholder="usuário" required />
+      </div>
+
+      <div class="form-field">
+        <label for="username">Email</label>
+        <input type="email" id="username" name="username" placeholder="seu@exemplo.com" required />
+      </div>
+
+      <div class="form-field">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Cadastrar</button>
+      </div>
+
+      <div class="aux-links" >
+        <a th:href="@{/login}" class="aux-link">Já possui conta? Realizar login</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>
