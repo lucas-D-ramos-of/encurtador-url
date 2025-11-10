@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head :: head('Historico')">
+
+</head>
+
+<body>
+
+<div th:insert="fragments/header :: headerPrivate"></div>
+
+<main class="conteudo-principal">
+    <h1>Histórico</h1>
+
+    <div id="box-historico">
+
+        <div id="listaContainer" class="lista-container">
+            <div id="lista"></div>
+        </div>
+
+    </div>
+</main>
+
+<div th:insert="fragments/footer :: footer"></div>
+<script th:src="@{/js/displayListControl.js}" defer></script>
+</body>
+</html>

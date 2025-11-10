@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head :: head('Sobre')"></head>
+
+<body>
+
+<div th:insert="fragments/header :: headerPrivate"></div>
+
+<main class="conteudo-principal">
+  <h1>Sobre</h1>
+
+  <div class="box login-card">
+    <menu>
+      <label>
+        <h3>
+          Desenvolvedores
+        </h3>
+      </label>
+      <label> Guilherme</label> </br>
+      <label> Lucas </label>
+
+      <h3>
+        Link do repositório
+      </h3>
+      </label>
+      <label> <a href="https://github.com/lucas-D-ramos-of/encurtador-url.git"> Repositório</a> </label>
+    </menu>
+  </div>
+</main>
+
+
+<div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

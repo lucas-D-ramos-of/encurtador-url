@@ -1,0 +1,11 @@
+<head xmlns:th="http://www.thymeleaf.org" th:fragment="head(title)">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title th:text="${title}">Aplicação</title>
+  <link rel="stylesheet" th:href="@{/css/base.css}" />
+  <link rel="stylesheet" th:href="@{/css/header.css}" />
+  <link rel="stylesheet" th:href="@{/css/layout.css}" />
+  <link rel="stylesheet" th:href="@{/css/components.css}" />
+  <link rel="stylesheet" th:href="@{/css/list.css}" />
+  <script th:src="@{/js/index.js}" defer></script>
+</head>
