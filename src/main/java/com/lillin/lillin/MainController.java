@@ -22,11 +22,15 @@ public class MainController {
     }
 
     @GetMapping("/trocar-senha")
-    public String trocarSenha() {
-        return "trocar-senha";
-    }
+    public String trocarSenha() { return "trocar-senha"; }
 
     @GetMapping("/cadastro")
     public String cadastro() { return "cadastro"; }
+
+    @GetMapping("/sobre")
+    public String sobre() { return "sobre"; }
+
+    @GetMapping("/historico")
+    public String historico() { return "historico"; }
 
 }

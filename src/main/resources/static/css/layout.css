@@ -28,3 +28,4 @@ que ficam no meio com o conteudo*/
 .box:hover { transform: translateY(-5px); box-shadow: var(--sombra-forte); }
 .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 .box h2 { font-size: 1.1rem; margin-top: 10px; }
+
