@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
-<!--Arquivo encurtadorLink coloquei
-a explicação desses fragments-->
+
 <head th:replace="fragments/head :: head('Sobre')"></head>
 
 <body>
-<!--Arquivo encurtadorLink coloquei
-a explicação desses fragments-->
+
 <div th:insert="fragments/header :: headerPrivate"></div>
 
 <main class="conteudo-principal">
@@ -26,13 +24,12 @@ a explicação desses fragments-->
         Link do repositório
       </h3>
       </label>
-      <label> https://github.com/lucas-D-ramos-of/encurtador-url.git</label>
+      <label> <a href="https://github.com/lucas-D-ramos-of/encurtador-url.git"> Repositório</a> </label>
     </menu>
   </div>
 </main>
 
-<!--Arquivo encurtadorLink coloquei
-a explicação desses fragments-->
+
 <div th:insert="fragments/footer :: footer"></div>
 </body>
 </html>
